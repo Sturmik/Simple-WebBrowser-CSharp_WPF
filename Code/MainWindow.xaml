@@ -1,0 +1,35 @@
+﻿<Window x:Class="SimpleWeb.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleWeb"
+        mc:Ignorable="d"
+        Title="SiBrowser" Height="450" Width="800" Icon="worldwide.png" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Window.Resources>
+        <Style x:Key="ExpandStyle">
+            <Setter Property="ItemsControl.FontSize" Value="14"/>
+            <Setter Property="ItemsControl.Foreground" Value="GhostWhite"/>
+            <Setter Property="ItemsControl.Background" Value="Black"/>
+            <Setter Property="ItemsControl.Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <DockPanel x:Name="mainDock">
+        <!--Menu-->
+        <Expander ExpandDirection="Right" DockPanel.Dock="Left" Background="AliceBlue">
+            <StackPanel>
+                <!--Browser mode-->
+                <Button x:Name="buttonBrowser" Content="Browser" Style="{StaticResource ExpandStyle}" Click="buttonBrowser_Click"/>
+                <!--Favourites window-->
+                <Button x:Name="buttonFavourites"  Content="Favourites" Style="{StaticResource ExpandStyle}" Click="buttonFavourites_Click"/>
+            </StackPanel> 
+        </Expander>
+
+        <!--Web browser-->
+        <Border BorderBrush="Black" BorderThickness="3"/>
+        <TabControl x:Name="webTabPages" DockPanel.Dock="Top">
+            <TabItem x:Name="buttonAddPage" Header="+" FontSize="14" Foreground="Green" Background="Transparent"
+                     MouseLeftButtonUp="buttonAddPage_MouseLeftButtonUp"/>
+        </TabControl>
+    </DockPanel>
+</Window>
