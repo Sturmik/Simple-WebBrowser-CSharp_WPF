@@ -10,3 +10,5 @@ This app, allows you to surf the internet with basic functions, like:
 - Refresh
 - Enter adress of website
 - Check favourite sites
+
+![alt text](https://github.com/Sturmik/Simple-WebBrowser-CSharp_WPF/blob/master/ShowcaseImages/SimpleWebBrowser.PNG)
